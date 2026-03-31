@@ -1,5 +1,6 @@
 import 'dotenv/config'
 import express from 'express'
+import cors from 'cors'
 import authRoutes from './src/routes/authRoutes.js'
 import taskRoutes from './src/routes/taskRoutes.js'
 import meetingRoutes from './src/routes/meetingRoutes.js'
@@ -11,6 +12,11 @@ const app = express()
 const PORT = process.env.PORT ?? 3000
 
 // ====== Middleware ======
+app.use(cors({
+  origin: process.env.CORS_ORIGIN?.split(',') ?? '*',
+  methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}))
 app.use(express.json())
 
 // ====== Health Check ======
