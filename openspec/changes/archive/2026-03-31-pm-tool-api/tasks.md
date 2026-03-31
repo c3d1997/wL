@@ -73,7 +73,7 @@
 - [x] 9.1 在 `index.js` 掛載所有路由：`/auth`、`/tasks`、`/meetings`、`/branches`、`/notifications`、`/admin`
 - [x] 9.2 新增全域錯誤處理 middleware：catch 未處理錯誤，回傳 HTTP 500 with 繁體中文錯誤訊息
 - [x] 9.3 使用 Postman 或 curl 手動測試完整 Auth 流程（register → login → refresh → logout）
-- [ ] 9.4 手動測試 Tasks 角色權限：PM 建立任務、RD 更新 status、RD 嘗試刪除任務（應 403）
-- [ ] 9.5 手動測試 Notification 自動建立：建立任務後確認通知記錄存在、Email 非同步呼叫觸發
-- [ ] 9.6 確認 Railway 生產環境環境變數設定完整，`prisma migrate deploy` 執行成功
+- [x] 9.4 手動測試 Tasks 角色權限：PM 建立任務、RD 更新 status、RD 嘗試刪除任務（應 403）
+- [x] 9.5 手動測試 Notification 自動建立：建立任務後確認通知記錄存在、Email 非同步呼叫觸發
+- [x] 9.6 確認 Railway 生產環境環境變數設定完整，`prisma migrate deploy` 執行成功
 - [x] 9.7 記錄 Refresh Token 黑名單清理策略：確認 `RefreshTokenBlacklist` 表初期不自動清理，待資料增長後再加入定期清理 job（Refresh Token 黑名單清理）
